@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 import Button from './Button'
 
 const AlbumDetails = ({album}) => {
-    const {title, artist, thumbnail_image, image  } = album;
+    const {title, artist, thumbnail_image, image, url  } = album;
 return (
     <Card>
         <CardSection>
@@ -28,8 +28,9 @@ return (
         </CardSection>
 
         <CardSection>
-            <Button onTap={() => alert(title)} /> {/* pass any arrbitary  name ...cud be onPress also..but doesnt mean it is consumed as onPress*/}
-            
+            <Button onTap={() => Linking.openURL(url)}> {/* pass any arrbitary  name ...cud be onPress also..but doesnt mean it is consumed as onPress*/}
+               Buy Now
+            </Button>
         </CardSection>
     </Card>
 )
