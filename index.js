@@ -4,7 +4,7 @@ import Header from './src/components/header'
 import AlbumList from './src/components/AlbumList'
 
 const App = () => (
-    <View>
+    <View >
     <Header headerText={'Kingkong'} />
     <AlbumList />
     </View>
